@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Delivery 🍽️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        🍽️ Catálogo de Comidas Delivery 🍰
+    </header>
+
+    <!-- Categorias arrastáveis -->
+    <section class="categories">
+        <div class="category">Marmitex</div>
+        <div class="category">Açaí</div>
+        <div class="category">Batata Hot</div>
+        <div class="category">Bebidas</div>
+        <div class="category">Sobremesas</div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="products">
+        <div class="product" data-name="Marmitex Frango" data-price="20">
+            <img src="https://via.placeholder.com/250" alt="Marmitex Frango">
+            <h2>Marmitex Frango</h2>
+            <p>Frango grelhado com arroz e salada.</p>
+            <p>R$ 20,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Marmitex Carne" data-price="25">
+            <img src="https://via.placeholder.com/250" alt="Marmitex Carne">
+            <h2>Marmitex Carne</h2>
+            <p>Carne assada com purê de batata.</p>
+            <p>R$ 25,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Marmitex Vegetariano" data-price="18">
+            <img src="https://via.placeholder.com/250" alt="Marmitex Vegetariano">
+            <h2>Marmitex Vegetariano</h2>
+            <p>Legumes grelhados com arroz integral.</p>
+            <p>R$ 18,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Açaí Tradicional" data-price="15">
+            <img src="https://via.placeholder.com/250" alt="Açaí Tradicional">
+            <h2>Açaí Tradicional</h2>
+            <p>Açaí batido com banana e granola.</p>
+            <p>R$ 15,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Açaí Especial" data-price="20">
+            <img src="https://via.placeholder.com/250" alt="Açaí Especial">
+            <h2>Açaí Especial</h2>
+            <p>Açaí com frutas e mel.</p>
+            <p>R$ 20,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Batata Hot Cheddar" data-price="12">
+            <img src="https://via.placeholder.com/250" alt="Batata Hot Cheddar">
+            <h2>Batata Hot Cheddar</h2>
+            <p>Batata frita com molho cheddar.</p>
+            <p>R$ 12,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Batata Hot Bacon" data-price="15">
+            <img src="https://via.placeholder.com/250" alt="Batata Hot Bacon">
+            <h2>Batata Hot Bacon</h2>
+            <p>Batata frita com bacon crocante.</p>
+            <p>R$ 15,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Refrigerante" data-price="5">
+            <img src="https://via.placeholder.com/250" alt="Refrigerante">
+            <h2>Refrigerante</h2>
+            <p>Refrigerante em lata.</p>
+            <p>R$ 5,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Sobremesa de Chocolate" data-price="10">
+            <img src="https://via.placeholder.com/250" alt="Sobremesa de Chocolate">
+            <h2>Sobremesa de Chocolate</h2>
+            <p>Deliciosa sobremesa de chocolate.</p>
+            <p>R$ 10,00</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <!-- Carrinho de Compras -->
+    <section class="cart">
+        <h2>🛒 Seu Carrinho</h2>
+        <ul id="cart-items">
+            <!-- Itens serão adicionados aqui -->
+        </ul>
+        <p>Total: <span id="total-price">R$ 0,00</span></p>
+        <button id="checkout-button">Finalizar Compra</button>
+
+        <!-- QR Code e Chave Pix -->
+        <div id="payment-info" style="display: none;">
+            <h3>🪙 Pagamento via Pix</h3>
+            <img src="meuqr.jpg" alt="QR Code" id="qr-code" style="width: 200px; height: auto;">
+            <p>Chave Pix: <strong>27997294468</strong></p>
+        </div>
+    </section>
+
+    <!-- Formulário de Checkout -->
+    <section class="checkout-form">
+        <h2>📦 Informações de Entrega</h2>
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="address">Endereço completo (rua, nº, bairro e referência)</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="payment">Forma de Pagamento</label>
+        <select id="payment" name="payment">
+            <option value="pix">Pix</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="dinheiro">Dinheiro</option>
+        </select>
+        
+        <button id="send-whatsapp">Enviar Pedido pelo WhatsApp</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
