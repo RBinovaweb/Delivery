@@ -64,7 +64,7 @@ function sendOrderWhatsApp() {
     message += `\nTotal: R$ ${total.toFixed(2)}`;
 
     // Criar link para WhatsApp
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=SEU_NUMERO&text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5527997294468&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl);
 }
 
